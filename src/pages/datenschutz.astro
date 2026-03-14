@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Datenschutz | Test Website" description="Datenschutzerklaerung gemaess DSGVO.">
+  <main class="page">
+    <h1>Datenschutzerklaerung</h1>
+
+    <section>
+      <h2>1. Datenerfassung auf dieser Website</h2>
+      <p>
+        Der Betreiber dieser Seiten nimmt den Schutz Ihrer persoenlichen Daten
+        sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und
+        entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser
+        Datenschutzerklaerung.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Analyse-Tools (Umami)</h2>
+      <p>
+        Diese Website nutzt Umami, eine datenschutzfreundliche, selbst gehostete
+        Webanalyse. Es werden keine Cookies gesetzt und keine persoenlichen
+        Daten erfasst. Die Daten werden ausschliesslich auf unserem eigenen
+        Server verarbeitet.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Fehlererfassung (GlitchTip)</h2>
+      <p>
+        Zur Verbesserung der Website-Qualitaet nutzen wir GlitchTip (selbst
+        gehostet) zur Erfassung technischer Fehler. Dies dient dem berechtigten
+        Interesse gemaess Art. 6 Abs. 1 lit. f DSGVO.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Cookies</h2>
+      <p>
+        Diese Website verwendet nur technisch notwendige Cookies. Analyse- und
+        Tracking-Cookies werden nur mit Ihrer ausdruecklichen Einwilligung
+        gesetzt.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Ihre Rechte</h2>
+      <p>
+        Sie haben das Recht auf Auskunft, Berichtigung, Loeschung,
+        Einschraenkung der Verarbeitung, Datenuebertragbarkeit und Widerspruch.
+        Wenden Sie sich hierzu an die im Impressum genannte Kontaktadresse.
+      </p>
+    </section>
+
+    <p class="back"><a href="/">Zurueck zur Startseite</a></p>
+  </main>
+</BaseLayout>
+
+<style>
+  .page {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .back {
+    margin-top: 3rem;
+  }
+</style>

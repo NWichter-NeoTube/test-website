@@ -1,0 +1,10 @@
+{
+  "type": "website",
+  "services": {
+    "web": {
+      "port": 80,
+      "context": "."
+    }
+  },
+  "databases": {}
+}

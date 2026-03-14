@@ -1,0 +1,30 @@
+---
+/**
+ * Drop-in component that initialises analytics and feature flags
+ * on every page. Include this in your base layout.
+ *
+ * Umami is loaded via a script tag (see below). Feature flags are
+ * resolved at build time from environment variables.
+ */
+import { getUmamiScriptUrl, getUmamiWebsiteId } from "../lib/analytics";
+import { resolveFlags } from "../lib/feature-flags";
+
+const umamiScriptUrl = getUmamiScriptUrl();
+const umamiWebsiteId = getUmamiWebsiteId();
+const featureFlags = resolveFlags(import.meta.env as unknown as Record<string, string>);
+---
+
+{/* Umami analytics script — privacy-friendly, no cookies */}
+{umamiScriptUrl && (
+  <script
+    defer
+    src={umamiScriptUrl}
+    data-website-id={umamiWebsiteId}
+    data-do-not-track="true"
+  />
+)}
+
+{/* Inject feature flags for client-side access */}
+<script define:vars={{ featureFlags }}>
+  window.__FEATURE_FLAGS__ = featureFlags;
+</script>

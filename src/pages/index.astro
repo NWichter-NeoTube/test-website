@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Test Website" description="A test website to verify the auto-deploy pipeline.">
+  <main class="page">
+    <section class="hero">
+      <h1>Test Website</h1>
+      <p class="hero__subtitle">
+        This is a test website to verify the Coolify auto-deploy pipeline works
+        end-to-end. If you can see this page, deployment was successful!
+      </p>
+    </section>
+
+    <section class="features">
+      <h2>Stack</h2>
+      <ul class="features__list">
+        <li><strong>Astro</strong> &mdash; static site generation</li>
+        <li><strong>Umami</strong> &mdash; privacy-friendly analytics (self-hosted)</li>
+        <li><strong>GlitchTip</strong> &mdash; error tracking (self-hosted, Sentry-compatible)</li>
+        <li><strong>ENV-based feature flags</strong> &mdash; simple, no external service</li>
+      </ul>
+    </section>
+
+    <section class="status">
+      <h2>Deploy Status</h2>
+      <p class="status__check">Auto-deploy pipeline: <strong>OK</strong></p>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .page {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem;
+  }
+
+  .hero {
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.125rem;
+    color: #475569;
+    max-width: 36rem;
+  }
+
+  .features {
+    margin-bottom: 3rem;
+  }
+
+  .features h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .features__list {
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .status {
+    padding: 1.5rem;
+    border: 2px solid #22c55e;
+    border-radius: 0.75rem;
+    background: #f0fdf4;
+  }
+
+  .status h2 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .status__check {
+    color: #166534;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .hero__subtitle {
+      color: #94a3b8;
+    }
+
+    .status {
+      background: #052e16;
+      border-color: #16a34a;
+    }
+
+    .status__check {
+      color: #86efac;
+    }
+  }
+</style>
